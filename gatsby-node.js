@@ -61,8 +61,8 @@ exports.onPostBuild = function () {
 
               var slug = fields.slug || frontmatter.path || frontmatter.slug || frontmatter.url;
               return {
-                id: _path2.default.join(siteUrl, slug),
-                url: _path2.default.join(siteUrl, slug),
+                id: "" + siteUrl + slug,
+                url: "" + siteUrl + slug,
                 title: frontmatter.title,
                 date_published: new Date(frontmatter.date).toISOString(),
                 date_modified: new Date(frontmatter.date).toISOString(),

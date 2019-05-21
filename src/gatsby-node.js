@@ -31,8 +31,8 @@ exports.onPostBuild = async ({ graphql }, pluginOptions) => {
 
     let slug = fields.slug || frontmatter.path || frontmatter.slug || frontmatter.url;
     return {
-      id: path.join(siteUrl, slug),
-      url: path.join(siteUrl, slug),
+      id: `${siteUrl}${slug}`,
+      url: `${siteUrl}${slug}`,
       title: frontmatter.title,
       date_published: new Date(frontmatter.date).toISOString(),
       date_modified: new Date(frontmatter.date).toISOString(),
