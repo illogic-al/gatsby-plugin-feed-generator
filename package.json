@@ -8,7 +8,7 @@
   },
   "author": "Mark Michon <hello@markmichon.com>",
   "license": "MIT",
-  "repository": "markmichon/gatsby-plugin-feed-generator",
+  "repository": "illogic-al/gatsby-plugin-feed-generator",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
