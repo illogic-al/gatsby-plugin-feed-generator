@@ -21,11 +21,15 @@ exports.onPostBuild = async ({ graphql }, pluginOptions) => {
 
   const feedQuery = await runQuery(graphql, options.feedQuery)
 
-  const { allMarkdownRemark: { edges: data } } = feedQuery
-  const items = data.map(i => {
-    const { node: { html, frontmatter } } = i
+  const {
+    allMarkdownRemark: { edges: data }
+  } = feedQuery;
+  const items = data.map((i) => {
+    const {
+      node: { html, frontmatter, fields }
+    } = i;
 
-    let slug = frontmatter.path || frontmatter.slug || frontmatter.url
+    let slug = fields.slug || frontmatter.path || frontmatter.slug || frontmatter.url;
     return {
       id: path.join(siteUrl, slug),
       url: path.join(siteUrl, slug),

@@ -40,6 +40,9 @@ export const defaultOptions = {
           edges {
             node {
               html
+              fields {
+                slug
+              }
               frontmatter {
                 date
                 path
