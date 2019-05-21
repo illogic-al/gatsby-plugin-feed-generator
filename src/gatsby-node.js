@@ -49,7 +49,7 @@ exports.onPostBuild = async ({ graphql }, pluginOptions) => {
       home_page_url: siteUrl,
       feed_url: path.join(siteUrl, "feed.json"),
       user_comment: `This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — ${siteUrl}/feed.json — and add it your reader.`,
-      favicon: path.join(siteUrl, "icon.png"),
+      favicon: path.join(siteUrl, "favicon.ico"),
       author: {
         name: author
       },
@@ -71,8 +71,8 @@ exports.onPostBuild = async ({ graphql }, pluginOptions) => {
       description: description,
       feed_url: path.join(siteUrl, "feed.rss"),
       site_url: siteUrl,
-      image_url: path.join(siteUrl, "icon.png")
-    })
+      image_url: path.join(siteUrl, "favicon.ico")
+    });
 
     items.forEach(i => {
       rssFeed.item({
