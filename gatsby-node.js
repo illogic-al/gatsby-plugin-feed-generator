@@ -81,9 +81,9 @@ exports.onPostBuild = function () {
               title: title,
               description: description,
               home_page_url: siteUrl,
-              feed_url: _path2.default.join(siteUrl, "feed.json"),
-              user_comment: "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL \u2014 " + siteUrl + "/feed.json \u2014 and add it your reader.",
-              favicon: _path2.default.join(siteUrl, "favicon.ico"),
+              feed_url: siteUrl + "feed.json",
+              user_comment: "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL \u2014 " + siteUrl + "feed.json \u2014 and add it your reader.",
+              favicon: siteUrl + "favicon.ico",
               author: {
                 name: author
               },
@@ -104,9 +104,9 @@ exports.onPostBuild = function () {
             rssFeed = new _rss2.default({
               title: title,
               description: description,
-              feed_url: _path2.default.join(siteUrl, "feed.rss"),
+              feed_url: siteUrl + "feed.rss",
               site_url: siteUrl,
-              image_url: _path2.default.join(siteUrl, "favicon.ico")
+              image_url: siteUrl + "favicon.ico"
             });
 
 
